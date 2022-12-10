@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.home{
+    width: 100%;
+    height: 763px;
+    background-image: url("../../img/indexImg/胡桃.jpg");
+    background-size: 100% 100%;
+}
