@@ -33,15 +33,15 @@ function mouseJS(ev){
     if(y<50){
         y=50
     }
-    xin.style.left=x+'px'
-    xin.style.top=y+'px'
+    xin.style.left=x-25+'px'
+    xin.style.top=y-30+'px'
     xin.style.backgroundImage=xinxin[suij]
     body.appendChild(xin)
-    if(c.length>=10){
+    if(c.length>=1){
         body.removeChild(d)
     }
 }
 // 计时器
 setInterval(function(){
    mouseoff=true
-},1000)
+},10)
