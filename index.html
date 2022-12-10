@@ -4,31 +4,52 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>欢迎</title>
+  <title>欢迎回来</title>
+  <link rel="shortcut icon" type="favicon.ico" href="./img/派蒙.jfif">
+  <link rel="stylesheet" href="./css/indexCss/index.css">
+  <script src="./js/index.js"></script>
 </head>
-<style scoped>
-  body{
-    margin: 0;
-    padding: 0;
-  }
-.beijin{
-  width: 1400px;
-  height: 700px;
-  background-image: url("./img/indexImg/动漫主题图片.jpg");
-  margin: 0 auto;
-  background-size: 100% 100%;
-}
-</style>
-<body>
+<body oncontextmenu="self.event.returnValue=false">
   <!-- 背景图片 -->
-  <div class="beijin">
-
-  </div>
-  <div>
-    <a href="./html/home/home.html"><button>点我</button></a>
+  <div class="beijin" id="beijin">
+    <!-- 头部div -->
+     <div class="header">
+       <!-- 图标加标题 -->
+         <div class="header_left">
+            <img src="./img/派蒙.jfif" alt="">
+            <p>原神小屋</p>
+         </div>
+         <!-- 右侧导航 -->
+         <div class="header_right">
+             <div>
+                 <a href="">官网</a>
+             </div>
+             <div>
+                  <a href="">社区</a>
+             </div>
+             <div>
+                  <a href="">文档</a>
+             </div>
+         </div>
+     </div>
+     <!-- 中间div -->
+     <div class="middle">
+          <div class="middle_p">欢迎回到小屋</div>
+          <div class="middle_two">不管环境多么纵容你，都要对自己有要求，保持自律的气质。</div>
+          <div class="middle_two">或许它暂时不能改变你的现状，但假以时日，它回馈的一定让你惊喜。</div>
+          <div class="middle_two">对自己有要求的人，总不会过得太差。</div>
+     </div>
+    <!-- 按钮div -->
+    <div class="btn_class">
+       <a href="html\home\home.html">
+        <button class="btn_1">Begin</button>
+      </a> 
+    </div>
+    <!-- 尾部div -->
+    <div>
+       
+    </div>
   </div>
 </body>
-<script>
-console.log("aa");
-</script>
+
 </html>

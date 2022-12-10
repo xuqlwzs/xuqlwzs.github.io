@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../../img/indexImg/动漫主题图片.jpg');
+    font-family: '宋体';
+    color: white;
+    background-size: 100% 100%;
+  }
+  /* 背景div */
+.beijin{
+  width: 100%;
+  height: 763px;
+  background-color: rgba(22, 22, 22,0.5 );
+}
+/* 头部div */
+.header{
+  width: 100%;
+  height: 20%;
+}
+/* 头部左侧 */
+.header_left{
+   width: 50%;
+   height: 100%;
+   display: flex; 
+   float: left;
+   align-items: center;
+   justify-content: center
+}
+.header_left img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.header_left p{
+  font-size: 25px;
+  padding-left: 10px;
+}
+/* 头部右侧 */
+.header_right{
+  width: 50%;
+  float: left;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.header_right div{
+   font-size: 25px;
+   padding-left: 40px;
+}
+.header_right div a{
+  text-decoration: none;
+  color: white;
+}
+.header_right div a:hover{
+  border-bottom: 4px solid white;
+}
+/* 中间div */
+.middle{
+  width: 40%;
+  height: 200px;
+  margin: 100px auto auto auto;
+  text-align: center;
+}
+.middle_p{
+  font-size: 30px;
+  padding-bottom: 10px;
+  font-family: 楷体;
+}
+.middle_two{
+  font-size: 20px;
+  padding-bottom: 5px;
+  font-family: 楷体;
+}
+/* 按钮 */
+/* 动画 */
+@keyframes move{
+  0% {
+      background-position: 0%;
+  }
+  100% {
+      background-position: 100%;
+  }
+}
+/* 按钮的div */
+.btn_class{
+  width: 220px;
+  height: 110px;
+  margin: 0 auto;
+}
+.btn_1{
+  margin-left: 10px;
+  margin-top: 5px;
+  position: relative;
+  width: 200px;
+  height: 100px;
+  color: white;
+  font-size: 30px;
+  line-height: 80px;
+  font-family: 楷体;
+  /* font-weight: bolder; */
+  text-align: center;
+  border-radius: 40px;
+  background: linear-gradient(90deg,rgb(242, 97, 94),rgb(234, 150, 104),rgb(251, 200, 2),rgb(174, 9, 43),rgb(108, 40, 243),rgb(212, 4, 128),rgb(85, 132, 206),green,pink);
+  background-size: 400%;
+  border: none;
+  outline: none;
+  text-shadow:
+  0 0 3px white,
+  0 0 3px white,
+  0 0 3px white;
+  z-index: 1; 
+  cursor: pointer;
+}
+.btn_1:hover{
+  animation: move 2s linear alternate infinite;
+}
+.btn_1::before{
+  content: '开始';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 210px;
+  height: 110px;
+  background: linear-gradient(90deg,rgb(242, 97, 94),rgb(234, 150, 104),rgb(251, 200, 2),rgb(174, 9, 43),rgb(108, 40, 243),rgb(212, 4, 128),rgb(85, 132, 206),green,pink);
+  background-size: 400%;
+  opacity: 0;
+  border-radius: 45px;
+  transform: .6s;
+  z-index: -1;
+}
+.btn_1:hover::before{
+  filter: blur(10px);
+  opacity: 1;
+  animation: move 2s linear alternate infinite;
+}
+
+/* cs */
+.cs{
+  width: 60px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: 100% 100%;
+  position: absolute;
+  z-index: -1;
+}
