@@ -37,7 +37,7 @@ function mouseJS(ev){
     xin.style.top=y-30+'px'
     xin.style.backgroundImage=xinxin[suij]
     body.appendChild(xin)
-    if(c.length>=1){
+    if(c.length>=10){
         body.removeChild(d)
     }
 }

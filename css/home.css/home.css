@@ -2,9 +2,180 @@ body{
     margin: 0;
     padding: 0;
 }
+/* 最大的div */
 .home{
     width: 100%;
     height: 763px;
-    background-image: url("../../img/indexImg/胡桃.jpg");
-    background-size: 100% 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(232, 226, 226);
+}
+
+/* 头部div */
+.home_top{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(69, 19, 19);
+    display: flex;
+}
+.home_top_img{
+   width: 60px;
+   height: 60px;
+   margin-left: 40px;
+   line-height: 130px;
+}
+.home_top_img img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.home_p{
+    font-size: 25px;
+    line-height: 80px;
+    font-family:宋体;
+    margin-left: 10px;
+}
+
+/* top 右侧 */
+.home_right{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    font-size: 18px;
+    width: 300px;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+.home_right_p:hover{
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+.home_right_p a{
+    text-decoration: none;
+    color: white;
+}
+
+.home_lamp{
+    width: 100px;
+    height: 80px;
+    /* background-color: aqua; */
+}
+.home_switch{
+    width: 80px;
+    height: 40px;
+    background-color: black;
+    border-radius: 25px;
+    margin: 20px auto;
+}
+.home_hei{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: rgb(42, 120, 165);
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.home_yue{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:transparent;
+    box-shadow:10px 5px 0px 0px #FFFF00;
+    float: right;
+    margin-left: 30px;
+}
+.home_tai{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #FFFF00;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 5px rgba(246, 254, 4, 0.3);
+    margin-top: 7px;
+    margin-left: 8px;
+    display: none;
+}
+.home_Search{
+    width: 80px;
+    height: 30px;
+}
+.home_Search input{
+    width: 100%;
+    height: 90%;
+    border: 1px solid white;
+    background-color: rgb(69, 19, 19);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+.home_Search input::placeholder{
+    font-size: 15px;
+    font-family: 楷体;
+    color: white;
+}
+
+
+
+/* 侧边div */
+.home_ce{
+width: 15%;
+height: 683px;
+overflow: hidden;
+overflow-y: scroll;
+background-color: rgb(84, 85, 85);
+}
+
+/* 拖动条样式 */
+.home_ce::-webkit-scrollbar{
+    width: 4px;
+}
+.home_ce::-webkit-scrollbar-thumb{
+    background: rgba(42, 165, 140);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(42,165,140);
+}
+.home_ce::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 5px rgba(42,165,140);
+    border-radius: 0;
+    background: rgba(42,165,140,0.1);
+}
+/* 侧边栏内容div */
+.home_ce_nei{
+    width: 100%;
+    height: 683px;
+}
+.ce_log{
+    width: 100%;
+    height: 150px;
+}
+.ce_log img{
+    width: 100%;
+    height: 150px;
+}
+.ce_nei{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-family: 楷体;
+    cursor: pointer;
+    font-size: 25px;
+}
+.ce_nei:hover{
+    color: rgb(42,165,140);
+}
+
+/* 内容div */
+.home_nei{
+width: 85%;
+height: 683px;
+background-color: rgb(84, 85, 85)
+}
+.home_neio{
+width: 100%;
+height: 100%;
+display: none;
 }

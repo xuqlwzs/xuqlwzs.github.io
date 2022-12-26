@@ -86,8 +86,9 @@ body{
 .btn_class{
   width: 220px;
   height: 110px;
-  margin: 0 auto;
+  margin: 100px auto;
 }
+
 .btn_1{
   margin-left: 10px;
   margin-top: 5px;
