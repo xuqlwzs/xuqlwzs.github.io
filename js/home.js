@@ -2,7 +2,7 @@
 
 
 
-const dcv=[]
+
 function bb(){
     axios({
         url:'/biji.json',
@@ -19,11 +19,25 @@ function bb(){
            div.innerText=ag.ce[i]
            div.className="ce_nei"
            d.style.display="block"
-           dcv.push(div)
-           dcv[i].onclick=function(){
-             
-           }
            c.appendChild(div)
+           var k=document.getElementsByClassName("ce_nei")
+           k[0].style.color="rgb(42,165,140)"
+           k[i].index=i
+           k[i].onclick=function(){
+            var dj=document.getElementsByClassName("home_neio")
+            var df=document.getElementsByClassName("ce_nei")
+              for(j=0;j<ag.ce.length;j++){
+                dj[j].style.display="none"
+                if(kaiguan==true){
+                    df[j].style.color="rgb(232, 226, 226)"
+                }else{
+                    df[j].style.color="rgb(84, 85, 85)"
+                }
+                 
+              }
+              dj[this.index].style.display="block"
+              df[this.index].style.color="rgb(42,165,140)"
+           }
         }
     });
 }
