@@ -89,7 +89,6 @@ function yd(){
     var e=document.getElementsByClassName("home_switch")[0]
     var g=document.getElementsByClassName("home_ce")[0]
     var o=document.getElementsByClassName("home")[0]
-    var p=document.getElementsByClassName("home_nei")[0]
     var r=document.getElementsByClassName("home_top")[0]
     var m=document.getElementById("sou")
     var b=a.offsetLeft
@@ -102,7 +101,6 @@ function yd(){
         e.style.backgroundColor="rgb(84, 85, 85)"
         g.style.backgroundColor="rgb(232, 226, 226)"
         o.style.color="rgb(84, 85, 85)"
-        p.style.backgroundColor="rgb(232, 226, 226)"
         r.style.backgroundColor="rgb(7, 192, 192)"
         m.style.backgroundColor="rgb(7, 192, 192)"
     }
@@ -115,7 +113,6 @@ function ad(){
     var e=document.getElementsByClassName("home_switch")[0]
     var g=document.getElementsByClassName("home_ce")[0]
     var o=document.getElementsByClassName("home")[0]
-    var p=document.getElementsByClassName("home_nei")[0]
     var r=document.getElementsByClassName("home_top")[0]
     var m=document.getElementById("sou")
     var b=a.offsetLeft
@@ -128,7 +125,6 @@ function ad(){
         e.style.backgroundColor="black"
         g.style.backgroundColor="rgb(84, 85, 85)"
         o.style.color="rgb(232, 226, 226)"
-        p.style.backgroundColor="rgb(84, 85, 85)"
         r.style.backgroundColor="rgb(69, 19, 19)"
         m.style.backgroundColor="rgb(69, 19, 19)"
     }

@@ -1,11 +1,12 @@
 body{
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 /* 最大的div */
 .home{
     width: 100%;
-    height: 763px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     color: rgb(232, 226, 226);
@@ -122,7 +123,7 @@ body{
 /* 侧边div */
 .home_ce{
 width: 15%;
-height: 683px;
+height: 710px;
 overflow: hidden;
 overflow-y: scroll;
 background-color: rgb(84, 85, 85);
@@ -145,7 +146,7 @@ background-color: rgb(84, 85, 85);
 /* 侧边栏内容div */
 .home_ce_nei{
     width: 100%;
-    height: 683px;
+    height: 100%;
 }
 .ce_log{
     width: 100%;
@@ -171,8 +172,7 @@ background-color: rgb(84, 85, 85);
 /* 内容div */
 .home_nei{
 width: 85%;
-height: 683px;
-background-color: rgb(84, 85, 85)
+height: 710px;
 }
 .home_neio{
 width: 100%;

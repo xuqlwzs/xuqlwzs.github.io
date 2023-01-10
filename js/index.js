@@ -27,7 +27,7 @@ function mouseJS(ev){
     if(x<50){
         x=50
     }
-    if(y>650){
+    if(y>680){
         y=650
     }
     if(y<50){
