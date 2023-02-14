@@ -155,20 +155,20 @@ window.onload= function (){
        //碰撞检测
        setInterval(function(){
         for(var i=0;i<dijijihe.length;i++){
+            for(var j=0;j<zidanjihe.length;j++){
+                if(knock(zidanjihe[j],dijijihe[i])){
+                 body.removeChild(dijijihe[i])
+                 body.removeChild(zidanjihe[j])
+                 dijijihe.splice(i,1)
+                 zidanjihe.splice(j,1)
+                 jf++
+                 p.innerText=jf
+                }
+             }
             if(pz(dijijihe[i],this.planex,this.planey)){
                 body.removeChild(dijijihe[i])
                 dijijihe.splice(i,1)
                 clearInterval(diji)
-            }
-            for(var j=0;j<zidanjihe.length;j++){
-               if(knock(dijijihe[i],zidanjihe[j])){
-                body.removeChild(dijijihe[i])
-                body.removeChild(zidanjihe[j])
-                dijijihe.splice(i,1)
-                zidanjihe.splice(j,1)
-                jf++
-                p.innerText=jf
-               }
             }
         }
        },1/60)
