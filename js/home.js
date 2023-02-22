@@ -39,6 +39,15 @@ window.onload=function bb(){
               df[this.index].style.color="rgb(42,165,140)"
            }
         }
+        for(var i=0;i<ag.xuexi.length;i++){
+            var di=document.createElement("div")
+            var a=document.createElement("a")
+            di.className="home_kapian"
+            a.innerText=ag.xuexi[i]
+            a.href="../biji/biji.html?id="+i;
+            di.appendChild(a)
+            d.appendChild(di)
+        }
     });
 }
 
@@ -143,7 +152,7 @@ canvas.height=this.height
 var Img=new Image()
 Img.src="../../img/homeimg/秒速五厘米.jpg"
 Img.onload=()=>{
-    cs.drawImage(Img,230,80,1400,720)
+    cs.drawImage(Img,0,0,canvas.width,canvas.height)
 }
 class Sakura {
     constructor(){
@@ -182,7 +191,7 @@ this.y=80;
 requestAnimationFrame(mo)
   function mo(){
      cs.clearRect(230,80,1400,720)
-     cs.drawImage(Img,230,80,1400,720)
+     cs.drawImage(Img,0,0,canvas.width,canvas.height)
      for(var i=0;i<sakuras.length;i++){
         sakuras[i].move()
      }

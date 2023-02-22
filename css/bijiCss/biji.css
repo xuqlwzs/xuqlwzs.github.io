@@ -1,0 +1,14 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+#root{
+font-family: '楷体';
+}
+.jq{
+    font-size: 25px;
+}
+.jqyou{
+    margin-top: 50px;
+    background-color: aqua;
+}

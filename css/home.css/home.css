@@ -198,3 +198,7 @@ display: none;
     position: relative;
     margin: 10px 0 10px 12px;
 }
+.home_kapian a{
+    text-decoration: none;
+    color: black;
+}
