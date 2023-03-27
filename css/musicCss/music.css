@@ -6,20 +6,39 @@ body {
   height: 100%;
   font-family: '微软雅黑';
 }
+.geciweizhi{
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/musicImg/歌词背景.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.mz{
+  width: 300px;
+  text-align: center;
+  margin: 0px auto;
+  padding-top: 20px;
+}
 .geci{
-float: right;
 overflow-y: auto;
-height: 600px;
+height: 500px;
+width: 300px;
+margin: 40px auto;
+/* padding-top: 40px; */
+}
+.geci::-webkit-scrollbar{
+  display: none;
 }
 .gecidiv{
-  width: 500px;
-  height: 20px;
-  margin-bottom: 10px;
+  width: 300px;
+  height: 40px;
+ text-align: center;
+ color: white;
 }
 .audio {
   width: 100%;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(17,90,160);
   position: fixed;
   bottom: 0;
 }
@@ -54,6 +73,7 @@ height: 600px;
 .zuo {
   float: left;
   width: 100px;
+  color: white;
 }
 .bofan {
   float: left;

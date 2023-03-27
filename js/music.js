@@ -10,12 +10,15 @@ window.onload = function () {
     const geci = document.getElementsByClassName("geci")[0]
     const jina = document.getElementsByClassName("jindu")[0]
     const zuo = document.getElementsByClassName("zuo")[0]
-    const gecidiv=document.getElementsByClassName("gecidiv")
+    const gecidiv = document.getElementsByClassName("gecidiv")
+    const mz=document.getElementsByClassName("mz")[0]
     const liebiao = [{ gemin: '我不曾忘记', url: '../../bgm/music/花玲、张安琪、沐霏 - 我不曾忘记.flac', gecia: '../../bgm/music/花玲、张安琪、沐霏 - 我不曾忘记.lrc' }, { gemin: '画中游', url: '../../bgm/music/王秋实 - 画中游.flac', gecia: '../../bgm/music/王秋实 - 画中游.lrc' }]
     let jin = 0;
     let off = true
     let index = 0;
-    let lyric=[];
+    let lyric = [];
+    var scrollHeight=true
+    // 播放点击事件
     play.onclick = function () {
         if (off) {
             play.src = "../../img/musicImg/pause.svg"
@@ -30,6 +33,7 @@ window.onload = function () {
             off = !off
         }
     }
+    // 进度条
     function jindua() {
         if (jin == 100) {
             clearInterval(jindu)
@@ -41,6 +45,7 @@ window.onload = function () {
             jindutiao.style.width = jin + '%'
         }
     }
+    // 鼠标按下事件确定位置
     jina.onmousedown = function (e) {
         jin = parseInt(e.clientX / 15.34)
         audo.currentTime = jin * (audo.duration / 100)
@@ -52,7 +57,7 @@ window.onload = function () {
             off = !off
         }
     }
-
+// 上一曲
     left.onclick = function () {
         if (index == 0) {
             index = liebiao.length - 1
@@ -65,6 +70,7 @@ window.onload = function () {
         getLyric()
         gemingx()
     }
+    // 下一曲
     right.onclick = function () {
         if (index == liebiao.length - 1) {
             index = 0
@@ -77,24 +83,28 @@ window.onload = function () {
         getLyric()
         gemingx()
     }
+    // 获取歌名
     function gemingx() {
         zuo.innerText = liebiao[index].gemin
+        mz.innerText=liebiao[index].gemin
     }
     gemingx()
-
+    // ajax获取本地歌词
     function getLyric() {
         var request = new XMLHttpRequest();
         request.open('GET', liebiao[index].gecia, true);
         request.responseType = 'text';
         request.onload = function () {
             lyric = parseLyric(request.response);
-            geci.innerHTML=''
-                for (var i = 0, l = lyric.length; i < l; i++) {
-                    var div=document.createElement('div')
-                    div.innerText=lyric[i][1]
-                    div.className='gecidiv'
+            geci.innerHTML = ''
+            for (var i = 0, l = lyric.length; i < l; i++) {
+                if(i>=1){
+                    var div = document.createElement('div')
+                    div.innerText = lyric[i][1]
+                    div.className = 'gecidiv'
                     geci.appendChild(div)
-                 };
+                }
+            };
         };
         request.onerror = request.onabort = function (e) {
             geci.textContent = '加载失败'
@@ -134,16 +144,26 @@ window.onload = function () {
         });
         return result;
     }
-    audo.ontimeupdate=function(e){
+    audo.ontimeupdate = function (e) {
         for (var i = 0, l = lyric.length; i < l; i++) {
             if (audo.currentTime /*当前播放的时间*/ > lyric[i][0]) {
                 //显示到页面
-                gecidiv[i].style.color='red'
-                if(i>0){
-                    gecidiv[i-1].style.color='black'
+                gecidiv[i].style.color = 'red'
+                //滚动
+                if(scrollHeight){
+                    setTimeout(gundon(i),3000)
                 }
-               
+                if (i > 0) {
+                    gecidiv[i - 1].style.color = 'black'
+                }
+
             };
         };
+    }
+    // 滚动
+    function gundon(i){
+       if(lyric.length!=0 && gecidiv.length!=0){
+        geci.scrollTop=(i-5)*40
+       }
     }
 }
