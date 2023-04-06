@@ -3,6 +3,7 @@
 
 
 window.onload = function bb() {
+    window.sessionStorage.setItem("index",'0')
     canva()
     axios({
         url: '/biji.json',
@@ -37,6 +38,7 @@ window.onload = function bb() {
                 }
                 dj[this.index].style.display = "block"
                 df[this.index].style.color = "rgb(42,165,140)"
+                window.sessionStorage.setItem("index",this.index)
             }
         }
         for (var i = 0; i < ag.xuexi.length; i++) {
@@ -80,12 +82,26 @@ window.addEventListener('resize', ck)
 // 开关移动黑白
 let kaiguan = true
 function swith() {
+    var val=window.sessionStorage.getItem("index")
+    var cenei = document.getElementsByClassName("ce_nei")
     if (kaiguan == true) {
+        if (cenei) {
+            for(var i=0;i<cenei.length;i++){
+                cenei[i].style.color ="rgb(84, 85, 85)"
+            }
+            cenei[val].style.color="rgb(42,165,140)"
+        }
         for (i = 0; i < 8; i++) {
             requestAnimationFrame(yd)
         }
         kaiguan = false
     } else {
+        if (cenei) {
+            for(var i=0;i<cenei.length;i++){
+                cenei[i].style.color ="rgb(232, 226, 226)"
+            }
+            cenei[val].style.color="rgb(42,165,140)"
+        }
         for (j = 0; j < 8; j++) {
             requestAnimationFrame(ad)
         }
@@ -180,14 +196,14 @@ function canva() {
         }
     }
     var sakuras = []
-    function yd() {
+    function yad() {
         for (var i = 0; i < 10; i++) {
             var sakura = new Sakura()
             sakura.protract()
             sakuras.push(sakura)
         }
     }
-    yd()
+    yad()
     requestAnimationFrame(mo)
     function mo() {
         cs.clearRect(230, 80, 1400, 720)

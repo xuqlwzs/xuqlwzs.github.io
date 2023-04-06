@@ -11,13 +11,13 @@ window.onload = function () {
     const jina = document.getElementsByClassName("jindu")[0]
     const zuo = document.getElementsByClassName("zuo")[0]
     const gecidiv = document.getElementsByClassName("gecidiv")
-    const mz=document.getElementsByClassName("mz")[0]
+    const mz = document.getElementsByClassName("mz")[0]
     const liebiao = [{ gemin: '我不曾忘记', url: '../../bgm/music/花玲、张安琪、沐霏 - 我不曾忘记.flac', gecia: '../../bgm/music/花玲、张安琪、沐霏 - 我不曾忘记.lrc' }, { gemin: '画中游', url: '../../bgm/music/王秋实 - 画中游.flac', gecia: '../../bgm/music/王秋实 - 画中游.lrc' }]
     let jin = 0;
     let off = true
     let index = 0;
     let lyric = [];
-    var scrollHeight=true
+    var scrollHeight = true
     // 播放点击事件
     play.onclick = function () {
         if (off) {
@@ -57,7 +57,7 @@ window.onload = function () {
             off = !off
         }
     }
-// 上一曲
+    // 上一曲
     left.onclick = function () {
         if (index == 0) {
             index = liebiao.length - 1
@@ -86,7 +86,7 @@ window.onload = function () {
     // 获取歌名
     function gemingx() {
         zuo.innerText = liebiao[index].gemin
-        mz.innerText=liebiao[index].gemin
+        mz.innerText = liebiao[index].gemin
     }
     gemingx()
     // ajax获取本地歌词
@@ -98,12 +98,10 @@ window.onload = function () {
             lyric = parseLyric(request.response);
             geci.innerHTML = ''
             for (var i = 0, l = lyric.length; i < l; i++) {
-                if(i>=1){
-                    var div = document.createElement('div')
-                    div.innerText = lyric[i][1]
-                    div.className = 'gecidiv'
-                    geci.appendChild(div)
-                }
+                var div = document.createElement('div')
+                div.innerText = lyric[i][1]
+                div.className = 'gecidiv'
+                geci.appendChild(div)
             };
         };
         request.onerror = request.onabort = function (e) {
@@ -150,20 +148,20 @@ window.onload = function () {
                 //显示到页面
                 gecidiv[i].style.color = 'red'
                 //滚动
-                if(scrollHeight){
-                    setTimeout(gundon(i),3000)
-                }
                 if (i > 0) {
-                    gecidiv[i - 1].style.color = 'black'
+                    gecidiv[i - 1].style.color = 'white'
+                }
+                if (scrollHeight) {
+                    setTimeout(gundon(i), 3000)
                 }
 
             };
         };
     }
     // 滚动
-    function gundon(i){
-       if(lyric.length!=0 && gecidiv.length!=0){
-        geci.scrollTop=(i-5)*40
-       }
+    function gundon(i) {
+        if (lyric.length != 0 && gecidiv.length != 0) {
+            geci.scrollTop = (i - 5) * 40
+        }
     }
 }

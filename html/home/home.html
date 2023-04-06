@@ -1,83 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/home.css/home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/home.css/home.css" />
     <title>主页</title>
-    <link rel="shortcut icon" type="favicon.ico" href="../../img/派蒙.jfif">
+    <link rel="shortcut icon" type="favicon.ico" href="../../img/派蒙.jfif" />
     <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.2/axios.js"></script>
     <script src="../../js/home.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <canvas id="canvas"></canvas>
     <div class="home">
       <!-- 顶部div    -->
-        <div class="home_top">
-             <div class="home_top_img">
-                 <img src="../../img/派蒙.jfif" alt="" >
-             </div>
-             <div class="home_p">
-                我的主页
-             </div>
-             <div class="home_right">
-                 <div class="home_right_p">
-                   <a href="https://ys.mihoyo.com/">官网</a> 
-                 </div>
-                 <div class="home_right_p">
-                     <a href="">文档</a> 
-                 </div>
-                 <div class="home_lamp">
-                     <div class="home_switch">
-                        <div class="home_hei" onclick="swith()">
-
-                        </div>
-                        <div class="home_yue">
-
-                        </div>
-                        <div class="home_tai">
-
-                        </div>
-                     </div>
-                 </div>
-                 <div class="home_Search">
-                     <input type="text" placeholder="搜索" id="sou">
-                 </div>
-             </div>
+      <div class="home_top">
+        <div class="home_top_img">
+          <img src="../../img/派蒙.jfif" alt="" />
         </div>
-
-        <!-- 侧边div -->
-        <div class="home_ce">
-             <div class="home_ce_nei">
-                   <div class="ce_log">
-                        <img src="../../img/indexImg/胡桃.jpg" alt="">
-                   </div>
-             </div>
+        <div class="home_p">我的主页</div>
+        <div class="home_right">
+          <div class="home_right_p">
+            <a href="https://ys.mihoyo.com/">官网</a>
+          </div>
+          <div class="home_right_p">
+            <a href="">文档</a>
+          </div>
+          <div class="home_lamp">
+            <div class="home_switch">
+              <div class="home_hei" onclick="swith()"></div>
+              <div class="home_yue"></div>
+              <div class="home_tai"></div>
+            </div>
+          </div>
+          <div class="home_Search">
+            <input type="text" placeholder="搜索" id="sou" />
+          </div>
         </div>
-        
-        <!-- 内容div -->
-        <div class="home_nei">
-             <div class="home_neio">
-                   
-             </div>
-             <div class="home_neio">
-                <!-- <div class="home_kapian">
+      </div>
+
+      <!-- 侧边div -->
+      <div class="home_ce">
+        <div class="home_ce_nei">
+          <div class="ce_log">
+            <img src="../../img/indexImg/胡桃.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 内容div -->
+      <div class="home_nei">
+        <div class="home_neio"></div>
+        <div class="home_neio">
+          <!-- <div class="home_kapian">
                     <a href="../Music/music.html">music</a>
                 </div> -->
-                <iframe src="../Music/music.html" frameborder="0" width="100%" height="100%"></iframe>
-             </div>
-             <div class="home_neio">
-                <div class="home_kapian">
-                    <a href="../game/game.html">飞机大战</a>
-                </div>
-             </div>
-             <div class="home_neio">
-                  444
-             </div>
+          <iframe
+            src="../Music/music.html"
+            frameborder="0"
+            width="100%"
+            height="100%"
+          ></iframe>
         </div>
+        <div class="home_neio">
+          <div class="home_kapian">
+            <a href="../game/game.html">飞机大战</a>
+          </div>
+        </div>
+        <div class="home_neio">444</div>
+      </div>
     </div>
-    
-</body>
-
+  </body>
 </html>
